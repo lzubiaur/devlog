@@ -7,7 +7,7 @@ title: Polygon texture bodies with Box2d and cocos2d-x
 Since I wrote this tutorial cocos2d-x v3 has been released and the code in this tutorial will only work for cocos2d-x v2. I might upgrade the code asap. Nevertheless the concepts explained in the tutorial should still be usefull. Thank you for reading!
 </div>
 In this tutorial we'll talk about how to create textured physics polygon with cocos2d-x (2.2.1) and box2d (2.2.1) using <a href="http://en.wikipedia.org/wiki/Polygon_triangulation">polygon triangulation</a>.
-For the impatient the source code is available on <a href="https://github.com/pix2dgames/texpoly" target="_blank">our github repository</a>.
+For the impatient the source code is available on <a href="https://github.com/lzubiaur/texpoly" target="_blank">our github repository</a>.
 You can also check the video capture right above.
 
 Basic knowledge of the cocos2d-x framework, box2d and opengl shaders is required.
