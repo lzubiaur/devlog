@@ -9,13 +9,14 @@ relative_permalinks: true
 # Setup
 title:            Devlog
 tagline:          'Game Development Blog'
-description:      'Personal game development blog .'
+description:      'My Personal Game Development blog'
 url:              http://voodoocactus.com/devlog
 baseurl:          /devlog/
 
 author:
   name:           'Laurent Zubiaur'
   url:            https://twitter.com/laurentzubiaur
+  email:          laurentzubiaur@voodoocactus.com
 
 company:
     name:         'Voodoo Cactus'

@@ -4,18 +4,22 @@ title: Polygon texture bodies with Box2d and cocos2d-x
 ---
 
 <div class="message">
-Since I wrote this tutorial cocos2d-x v3 has been released and the code in this tutorial will only work for cocos2d-x v2. I might upgrade the code asap. Nevertheless the concepts explained in the tutorial should still be usefull. Thank you for reading!
+UPDATE Since I wrote this tutorial cocos2d-x v3 has been released and the code in this tutorial will only work for cocos2d-x v2. I might upgrade the code asap. Nevertheless the concepts explained in the tutorial should still be usefull. Thank you for reading!
 </div>
-In this tutorial we'll talk about how to create textured physics polygon with cocos2d-x (2.2.1) and box2d (2.2.1) using <a href="http://en.wikipedia.org/wiki/Polygon_triangulation">polygon triangulation</a>.
+
+<div class="message">
+UPDATE2 The concepts and mecanics describe here have been implemented in my first game <a href="https://itunes.apple.com/us/app/yummy-jump/id925761778">HYummy Jump"</a>
+</div>
+
+In this tutorial we'll talk about how to create textured physics polygon with [cocos2d-x](http://www.cocos2d-x.org) (2.2.1) and [box2d](http://box2d.org) (2.2.1) using <a href="http://en.wikipedia.org/wiki/Polygon_triangulation">polygon triangulation</a>.
 For the impatient the source code is available on <a href="https://github.com/lzubiaur/texpoly" target="_blank">our github repository</a>.
-You can also check the video capture right above.
 
 Basic knowledge of the cocos2d-x framework, box2d and opengl shaders is required.
 
 <iframe width="720" height="315" src="//www.youtube.com/embed/yKfnhK9xknE" frameborder="0" allowfullscreen></iframe>
 
 ## Introduction
-Box2d supports only convex polygon with a maximum number of height vertices (might be increased but not recommended).
+Box2d is a great middleware physics engine for game. If you are familiar with this engine you might already know that it supports only **convex polygon** with a maximum number of 8 vertices (it might be increased but not recommended).
 So if we want to create complex or concave polygon with box2d we have to decompose the body into smaller parts and group them into one big body.
 This can be achieved by polygon triangulation where the polygon body is composed of small fixtures triangles.
 Click on the image above to see how a concave polygon body with hole is triangulated into several fixtures
@@ -200,17 +204,18 @@ Since we want to be able to communicate the vertex (our polygon points), texture
 You can have a look at the shader source code in the *shaders* folder from your cocos2dx distribution.
 
 
-In line 8 we "get" the color variable from the shader. Because we don't want to "vary" the color we use a uniform shader variable (see the <a href="http://www.opengl.org/sdk/docs/tutorials/ClockworkCoders/uniform.php">OpenGL documentation</a>).
+In line 8 we "get" the color variable from the shader. Because we don't want to update the color we use a uniform shader variable (see the <a href="http://www.opengl.org/sdk/docs/tutorials/ClockworkCoders/uniform.php">OpenGL documentation</a>).
  Use the *kCCShader_PositionLengthTexureColor* shader if you want to vary the color and make gradient effects (e.g. *CCLayerColor*).
 
 
 ## Draw the texture polygon
 The texture polygon is drawn inside the TexPoly::draw() method which is just doing the following.
-* Bind the texture: tell the shader which texture we want to use (line 8).</li>
-* Enable the vertex and texture coordinate parameters (line 10)</li>
-* Set the uniform color variable (line 13)</li>
-* Pass both vertex and texture coord to the shader (line 15 and 17)</li>
-* Set the render primitive. In this case GL_TRIANGLES (line 19).</li>
+
+* Bind the texture: tell the shader which texture we want to use (line 8).
+* Enable the vertex and texture coordinate parameters (line 10)
+* Set the uniform color variable (line 13)
+* Pass both vertex and texture coord to the shader (line 15 and 17)
+* Set the render primitive. In this case GL_TRIANGLES (line 19)
 
 {% highlight cpp %}
 void TexPoly::draw()
@@ -291,6 +296,6 @@ void HelloWorld::update(float dt)
 
 ## What next?
 
-You are now welcome to clone the [example project](https://github.com/pix2dgames/texpoly) and have a look at the TexPoly and HelloWorld classes. There's a simple random polygon generator and a polygon with hole example. 
+You are now welcome to clone the [example project](https://github.com/lzubiaur/texpoly) and have a look at the TexPoly and HelloWorld classes. You might also build the project and test it by yourself. The project includes a random polygon generator and a example of polygon with hole. 
 
-Do not hesitate to leave a comment or [follow me twitter]({{ site.author.url }}).
+Have questions or suggestions? Do not hesitate to email me at [{{ site.author.email }}](mailto:{{ site.author.email }}) or ask me on [twitter]({{ site.author.url }}).
