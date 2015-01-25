@@ -7,15 +7,19 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Devlog 
+title:            Devlog
 tagline:          'Game Development Blog'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          /gamedevlog/
+description:      'Personal game development blog .'
+url:              http://voodoocactus.com/devlog
+baseurl:          /devlog/
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Laurent Zubiaur'
+  url:            https://twitter.com/laurentzubiaur
+
+company:
+    name:         'Voodoo Cactus'
+    url:          http://voodoocactus.com/
 
 paginate:         5
 
@@ -23,4 +27,4 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/lzubiaur
