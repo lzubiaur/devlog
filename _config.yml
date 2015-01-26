@@ -13,10 +13,15 @@ description:      'Personal game development blog by <a href="https://twitter.co
 url:              http://voodoocactus.com/devlog
 baseurl:          /devlog/
 
+rss:              /devlog/atom.xml
+
 author:
   name:           'Laurent Zubiaur'
   url:            https://twitter.com/laurentzubiaur
   email:          laurentzubiaur@voodoocactus.com
+  tumblr:         http://blog.voodoocactus.com/
+  youtube:        https://www.youtube.com/user/zubifies
+  facebook:       https://www.facebook.com/voodocactustudio
 
 company:
     name:         'Voodoo Cactus'

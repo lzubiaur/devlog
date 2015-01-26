@@ -3,29 +3,37 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! I'm Laurent Zubiaur and this is my Game Development Blog where I mainly post about coding (c++,lua) and my experiments with game.
+> Hey there! I'm a software engineer and game developer at [{{site.company.name}}]({{site.company.url}}) and interested about everything related to video game design and development.
 
-</p>
+## Current skills
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I'm an Open Source enthusiast and like to learn and experiment with new game technologies and frameworks. Here's the tech skills I'm fluent with and using right now.
 
-There are currently two themes built on Poole:
+* Coding (C++, Lua, Java, git)
+* Frameworks (cocos2d-x, Box2d, OpenGL)
+* Mobile development (Android, iOS)
+* IDE (Vim, Xcode)
+* 2D art (Inkscape, Gimp)
+* Web development (Jekyll)
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+## Keep in touch
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+* [Email](mailto:{{site.author.email}})
+* [Twitter]({{site.author.url}})
+* [RSS]({{site.rss}})
+* [Facebook]({{site.author.facebook}})
+* [GitHub]({{site.github.repo}})
+* [Tumblr]({{site.author.tumblr}})
+* [Youtube]({{site.author.youtube}})
+* [OpenGameArt](http://opengameart.org/users/voodoo-cactus)
 
-## Setup
+## Leisures
 
-Some fun facts about the setup of this project include:
+* Retro gaming and video game history
+* Manga and Japanese anime
+* European and american comics
+* Fantasy and Sci-Fi literature/movies
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+Have questions or suggestions? Please feel free to contact me by email at [{{site.author.email}}](mailto:{{site.author.email}}) or [ask me on Twitter]({{site.author.url}}).
 
 Thanks for reading!
