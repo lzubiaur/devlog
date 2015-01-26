@@ -6,7 +6,7 @@ tags: ['code','box2d','cocos2dx']
 ---
 
 <div class="message">
-UPDATE Since I wrote this tutorial cocos2d-x v3 has been released and the code in this tutorial is only for cocos2d-x v2. I might upgrade the code ASAP. Nevertheless the concepts explained in the tutorial should still be relevant. Thank you for reading!
+UPDATE Since I wrote this tutorial cocos2d-x v3 has been released and the code in this tutorial is only for v2 but the concepts should still be relevant. Thank you for reading!
 </div>
 
 <div class="message">
