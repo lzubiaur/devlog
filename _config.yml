@@ -23,7 +23,7 @@ company:
     url:          http://voodoocactus.com/
 
 disqus:
-        shortname: 'laurentzubiaur'
+        shortname: 'gamedevlog'
 
 paginate:         5
 
