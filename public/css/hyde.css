@@ -248,3 +248,12 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+
+/* Laurent Zubiaur custom style */
+.caption {
+    color: #777;
+    font-size: 0.8rem;
+    text-align: center;
+}
+

@@ -1,18 +1,19 @@
 ---
 layout: post
+comments: true
 title: Polygon texture bodies with Box2d and cocos2d-x
 ---
 
 <div class="message">
-UPDATE Since I wrote this tutorial cocos2d-x v3 has been released and the code in this tutorial will only work for cocos2d-x v2. I might upgrade the code asap. Nevertheless the concepts explained in the tutorial should still be usefull. Thank you for reading!
+UPDATE Since I wrote this tutorial cocos2d-x v3 has been released and the code in this tutorial is only for cocos2d-x v2. I might upgrade the code ASAP. Nevertheless the concepts explained in the tutorial should still be relevant. Thank you for reading!
 </div>
 
 <div class="message">
-UPDATE2 The concepts and mecanics describe here have been implemented in my first game <a href="https://itunes.apple.com/us/app/yummy-jump/id925761778">HYummy Jump"</a>
+UPDATE2 The concepts and mecanics describe here have been implemented in my first game <a href="https://itunes.apple.com/us/app/yummy-jump/id925761778">"Yummy Jump"</a>
 </div>
 
 In this tutorial we'll talk about how to create textured physics polygon with [cocos2d-x](http://www.cocos2d-x.org) (2.2.1) and [box2d](http://box2d.org) (2.2.1) using <a href="http://en.wikipedia.org/wiki/Polygon_triangulation">polygon triangulation</a>.
-For the impatient the source code is available on <a href="https://github.com/lzubiaur/texpoly" target="_blank">our github repository</a>.
+For the impatient the source code is available on <a href="https://github.com/lzubiaur/texpoly" target="_blank">my github</a>.
 
 Basic knowledge of the cocos2d-x framework, box2d and opengl shaders is required.
 
@@ -21,10 +22,11 @@ Basic knowledge of the cocos2d-x framework, box2d and opengl shaders is required
 ## Introduction
 Box2d is a great middleware physics engine for game. If you are familiar with this engine you might already know that it supports only **convex polygon** with a maximum number of 8 vertices (it might be increased but not recommended).
 So if we want to create complex or concave polygon with box2d we have to decompose the body into smaller parts and group them into one big body.
-This can be achieved by polygon triangulation where the polygon body is composed of small fixtures triangles.
-Click on the image above to see how a concave polygon body with hole is triangulated into several fixtures
 
-![placeholder]({{site.baseurl}}/public/2015/01/drawing.png "")
+This can be achieved by polygon triangulation where the polygon body is composed of small fixtures triangles.
+The image below illustrates how a Box2D concave polygon body with hole is triangulated into several fixtures and how the texture is mapped to render the body.
+
+{% include image.html url="/public/2015/01/drawing.png" description="Triangulate polygon body and texture mapping" %}
 
 The excellent [poly2tri](https://github.com/jhasse/poly2tri) library is used to triangulate the polygons.
 Although there's a small drawback using a third party library like poly2tri (we'll have to convert cocos2d point into poly2tri point) it's worth it.
@@ -32,26 +34,26 @@ Note that the [clipper](http://www.angusj.com/delphi/clipper.php) library is als
 
 ## The big picture
 
-The texture polygons are implemented in the class *TexPoly* which inherit from CCNode.
+The texture polygons are implemented in the class *TexPoly* which inherit from *CCNode*.
 The class definition is shown below but the most important part are the *init* and *draw* methods which will be investigated in depth in the next section.
-Put simply a TexPoly object is not more than a CCNode who draws a texture using a shader program. It will also achieve the following tasks.
+Put simply a TexPoly object is just a *CCNode* who draws a texture using a shader program. It will also achieve the following tasks.
 
 * Load the texture image
 * Triangulate the polygon
 * Create the physics box2d body and the fixtures
 * Configure the shader program
 
-In order to instanciate a TexPoly object we must provide:
+In order to instanciate a *TexPoly* object we must provide:
 
 * the physics world where the body and fixtures will be created
 * the polygon vertices
 * optionally a hole vertices
 * the texture image file name 
 
-Once the TexPoly node is created and added to a layer we have to simulate the physic world by updating both TexPoly's position and rotation.
+Once the *TexPoly* node is created and added to a layer we have to simulate the physic world by updating both *TexPoly*'s position and rotation.
 
-To do so the Box2D body created by TexPoly keeps a reference to the node attached to him (using body's userdata).
-It's then possible to iterate through all the bodies and update the TexPoly node attached (discussed in the [Simulate the physics world](#SimulatePhysics) section).
+To do so the Box2D body created by *TexPoly* keeps a reference to the node attached to him (using body's userdata).
+It's then possible to iterate through all the bodies and update the *TexPoly* node attached (discussed in the [Simulate the physics world](#SimulatePhysics) section).
 
 {% highlight cpp %}
 typedef std::vector<CCPoint&> CCPointVector;
@@ -76,7 +78,7 @@ protected:
 };
 {% endhighlight %}
 
-### Create the polygon
+## Create the polygon
 Before we can use the texture we must load the image/pattern into the textures cache.
  The texture will only be loaded once. If it's already been loaded then *addImage* simply returns the texture object from the cache.
  Note that the texture image size must be a power of two (e.g. width=32 and height=32).
@@ -257,8 +259,8 @@ void TexPoly::setColor(const ccColor4F &amp;color)
 myPolytexture->setColor(ccc4f(1.f, .4f, .3f, 1.f));
 {% endhighlight %}
 
-![placeholder]({{site.baseurl}}/public/2015/01/polygon_color2.jpg "")
-![placeholder]({{site.baseurl}}/public/2015/01/polygon_color3.jpg "")
+{% include image.html url="/public/2015/01/polygon_color2.jpg" description="Change texture color - example 1." %}
+{% include image.html url="/public/2015/01/polygon_color3.jpg" description="Change texture color - example 2." %}
 
 <span id="SimulatePhysics" />
 
@@ -299,3 +301,7 @@ void HelloWorld::update(float dt)
 You are now welcome to clone the [example project](https://github.com/lzubiaur/texpoly) and have a look at the TexPoly and HelloWorld classes. You might also build the project and test it by yourself. The project includes a random polygon generator and a example of polygon with hole. 
 
 Have questions or suggestions? Do not hesitate to email me at [{{ site.author.email }}](mailto:{{ site.author.email }}) or ask me on [twitter]({{ site.author.url }}).
+
+{% if page.comments %}
+{% include disqus.html %}
+{% endif %}

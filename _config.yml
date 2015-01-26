@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            Devlog
 tagline:          'Game Development Blog'
-description:      'My Personal Game Development blog'
+description:      'Personal game development blog by <a href="https://twitter.com/laurentzubiaur" target="_blank">@laurentzubiaur</a>'
 url:              http://voodoocactus.com/devlog
 baseurl:          /devlog/
 
@@ -22,10 +22,13 @@ company:
     name:         'Voodoo Cactus'
     url:          http://voodoocactus.com/
 
+disqus:
+        shortname: 'laurentzubiaur'
+
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+version:          1.2.0
 
 github:
   repo:           https://github.com/lzubiaur
