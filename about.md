@@ -29,9 +29,8 @@ I'm an Open Source enthusiast and like to learn and experiment with new game tec
 
 ## Leisures
 
-* Retro gaming and video game history
+* Retro gaming
 * Manga and Japanese anime
-* European and american comics
 * Fantasy and Sci-Fi literature/movies
 
 Have questions or suggestions? Please feel free to contact me by email at [{{site.author.email}}](mailto:{{site.author.email}}) or [ask me on Twitter]({{site.author.url}}).
