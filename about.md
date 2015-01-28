@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-> Hey there! I'm a software engineer and game developer at [{{site.company.name}}]({{site.company.url}}) and interested about everything related to video game design and development.
+> Hey there! I'm a game developer at [{{site.company.name}}]({{site.company.url}}) Studio (Barcelona, Spain) and interested about everything related to video game design and development.
 
 ## Current skills
 
