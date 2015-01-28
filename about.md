@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-> Hey there! I'm a game developer at [{{site.company.name}}]({{site.company.url}}) Studio (Barcelona, Spain) and interested about everything related to video game design and development.
+> Hey there! I'm a freelance game developer from Barcelona, Spain and owner at [{{site.company.name}}]({{site.company.url}}). I'm interested about everything related to video game design and development.
 
 ## Current skills
 
@@ -33,6 +33,6 @@ I'm an Open Source enthusiast and like to learn and experiment with new game tec
 * Manga and Japanese anime
 * Fantasy and Sci-Fi literature/movies
 
-Have questions or suggestions? Please feel free to contact me by email at [{{site.author.email}}](mailto:{{site.author.email}}) or [ask me on Twitter]({{site.author.url}}).
+Have questions or suggestions? Want to hire me or just talk about your project(s)? Please feel free to contact me by email at [{{site.author.email}}](mailto:{{site.author.email}}) or [ask me on Twitter]({{site.author.url}}).
 
 Thanks for reading!
