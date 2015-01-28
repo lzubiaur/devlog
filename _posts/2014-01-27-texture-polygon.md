@@ -21,15 +21,15 @@ For the impatient the source code is available on <a href="https://github.com/lz
 <iframe width="720" height="405" src="//www.youtube.com/embed/yKfnhK9xknE" frameborder="0" allowfullscreen></iframe>
 
 ## Table of Contents
-  * [Introduction](#section-1)
-  * [The big picture](#section-2)
-  * [Create the polygon](#section-3)
-  * [Draw the texture polygon](#section-4)
-  * [Changing the texture color](#section-5)
-  * [Simulate the physics world](#section-6)
-  * [What next](#section-7)
+  * [Introduction](#{{page.id}}-section-1)
+  * [The big picture](#{{page.id}}-section-2)
+  * [Create the polygon](#{{page.id}}-section-3)
+  * [Draw the texture polygon](#{{page.id}}-section-4)
+  * [Changing the texture color](#{{page.id}}-section-5)
+  * [Simulate the physics world](#{{page.id}}-section-6)
+  * [What next](#{{page.id}}-section-7)
 
-## <a id="section-1"></a>Introduction 
+## <a id="{{page.id}}-section-1"></a>Introduction 
 Box2d is a great middleware physics engine for game. If you are familiar with this engine you might already know that it supports only **convex polygon** with a maximum number of 8 vertices (it might be increased but not recommended).
 So if we want to create complex or concave polygon with box2d we have to decompose the body into smaller parts and group them into one big body.
 
@@ -42,7 +42,7 @@ The excellent [poly2tri](https://github.com/jhasse/poly2tri) library is used to 
 Although there's a small drawback using a third party library like poly2tri (we'll have to convert cocos2d point into poly2tri point) it's worth it.
 Note that the [clipper](http://www.angusj.com/delphi/clipper.php) library is also included in the project but it's only used to simplify the random generated polygons.
 
-## <a href='section-2'></a>The big picture
+## <a id='{{page.id}}-section-2'></a>The big picture
 
 The texture polygons are implemented in the class *TexPoly* which inherit from *CCNode*.
 The class definition is shown below but the most important part are the *init* and *draw* methods which will be investigated in depth in the next section.
@@ -88,7 +88,7 @@ protected:
 };
 {% endhighlight %}
 
-## <a href="section-3"></a>Create the polygon
+## <a id="{{page.id}}-section-3"></a>Create the polygon
 Before we can use the texture we must load the image/pattern into the textures cache.
  The texture will only be loaded once. If it's already been loaded then *addImage* simply returns the texture object from the cache.
  Note that the texture image size must be a power of two (e.g. width=32 and height=32).
@@ -220,7 +220,7 @@ In line 8 we "get" the color variable from the shader. Because we don't want to 
  Use the *kCCShader_PositionLengthTexureColor* shader if you want to vary the color and make gradient effects (e.g. *CCLayerColor*).
 
 
-## <a href="section-4"></a>Draw the texture polygon
+## <a id="{{page.id}}-section-4"></a>Draw the texture polygon
 The texture polygon is drawn inside the TexPoly::draw() method which is just doing the following.
 
 * Bind the texture: tell the shader which texture we want to use (line 8).
@@ -257,7 +257,7 @@ void TexPoly::draw()
 }
 {% endhighlight %}
 
-## <a href="section-5"></a>Changing the texture color
+## <a id="{{page.id}}-section-5"></a>Changing the texture color
 
 If we want to change the color of the texture we might simply write a setColor method as below.
 {% highlight cpp %}
@@ -274,7 +274,7 @@ myPolytexture->setColor(ccc4f(1.f, .4f, .3f, 1.f));
 
 <span id="SimulatePhysics" />
 
-## <a href="section-6"></a>Simulate the physics world
+## <a id="{{page.id}}-section-6"></a>Simulate the physics world
 
 In HelloWorld::init we can now create the box2d physics world and schedule the update method. 
 {% highlight cpp %}
@@ -306,7 +306,7 @@ void HelloWorld::update(float dt)
 }
 {% endhighlight %}
 
-## <a href="section-7"></a>What next?
+## <a id="{{page.id}}-section-7"></a>What next?
 
 You are now welcome to clone the [example project](https://github.com/lzubiaur/texpoly) and have a look at the TexPoly and HelloWorld classes. You might also build the project and test it by yourself. The project includes a random polygon generator and a example of polygon with hole. 
 
