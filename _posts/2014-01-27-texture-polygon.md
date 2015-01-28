@@ -311,7 +311,3 @@ void HelloWorld::update(float dt)
 You are now welcome to clone the [example project](https://github.com/lzubiaur/texpoly) and have a look at the TexPoly and HelloWorld classes. You might also build the project and test it by yourself. The project includes a random polygon generator and a example of polygon with hole. 
 
 Have questions or suggestions? Do not hesitate to email me at [{{ site.author.email }}](mailto:{{ site.author.email }}) or ask me on [twitter]({{ site.author.url }}).
-
-{% if page.comments %}
-{% include disqus.html %}
-{% endif %}
