@@ -57,7 +57,7 @@ local player = world:add({
     update = function(self,dt)
         local ax,ay,cols,len = world:move(self,self.x + self.vx * dt,self.y + self.vy * dt,self.filter)
         self.x, self.y = ax, ay
-        for i=1,len do 
+        for i=1,len do
             cols[1].other.collide = true
         end
     end,
@@ -74,7 +74,7 @@ A layer is also created to register a touch handler to change the player's direc
 -- Create the "touch layer"
 local layer = cc.Layer:create()
 layer:registerScriptTouchHandler(function(event,x,y)
-    if event == 'began' or event == 'moved' then 
+    if event == 'began' or event == 'moved' then
         -- Compute the player's new direction
         local px,py = world:getRect(player)
         local p = cc.pMul(cc.pNormalize(cc.pSub(cc.p(px,py),cc.p(x,y))),100)
@@ -92,7 +92,7 @@ We can now create the terrain using random generated rectangle. When the player 
 {% highlight lua %}
 local winSize = cc.Director:getInstance():getWinSize()
 math.randomseed(os.time())
-for i=1,15 do 
+for i=1,15 do
     local ground = world:add({
         collide = false,
         draw = function(self,drawNode)
@@ -128,4 +128,3 @@ scene:addChild(node)
 -- Run the scene
 cc.Director:getInstance():replaceScene(scene)
 {% endhighlight %}
-
