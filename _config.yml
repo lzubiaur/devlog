@@ -8,9 +8,9 @@ relative_permalinks: true
 
 # Setup
 title:            Devlog
-tagline:          'Game Development Blog'
-description:      'Personal game development blog by <a href="https://twitter.com/laurentzubiaur" target="_blank">@laurentzubiaur</a>'
-url:              http://voodoocactus.com/devlog
+tagline:          'Development Blog'
+description:      'Personal development blog by <a href="https://twitter.com/laurentzubiaur" target="_blank">@laurentzubiaur</a>'
+url:              https://lzubiaur.github.com/devlog
 baseurl:          /devlog/
 
 rss:              /devlog/atom.xml
@@ -18,7 +18,7 @@ rss:              /devlog/atom.xml
 author:
   name:           'Laurent Zubiaur'
   url:            https://twitter.com/laurentzubiaur
-  email:          laurentzubiaur@voodoocactus.com
+  email:          zubiaur.laurent@gmail.com
   tumblr:         http://blog.voodoocactus.com/
   youtube:        https://www.youtube.com/user/zubifies
   facebook:       https://www.facebook.com/voodocactustudio

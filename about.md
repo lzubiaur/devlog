@@ -3,18 +3,11 @@ layout: page
 title: About
 ---
 
-> Hey there! I'm a freelance game developer from Barcelona, Spain and owner at [{{site.company.name}}]({{site.company.url}}). I'm interested about everything related to video game design and development.
+> Hey there! My name is {{author.name}}. I'm a software developer from Barcelona, Spain. I have a keen interest in everything related to programming and IT systems.
 
-## Current skills
+Have any question or suggestion? Want to hire me or just talk about your project(s)? Please feel free to contact me at [{{site.author.email}}](mailto:{{site.author.email}}).
 
-I'm an Open Source enthusiast and like to learn and experiment with new game technologies and frameworks. Here's the tech skills I'm fluent with and using right now.
-
-* Coding (C++, Lua, Java, git)
-* Frameworks (cocos2d-x, Box2d, OpenGL)
-* Mobile development (Android, iOS)
-* IDE (Vim, Xcode)
-* 2D art (Inkscape, Gimp)
-* Web development (Jekyll)
+Thanks for reading!
 
 ## Keep in touch
 
@@ -26,13 +19,3 @@ I'm an Open Source enthusiast and like to learn and experiment with new game tec
 * [Tumblr]({{site.author.tumblr}})
 * [Youtube]({{site.author.youtube}})
 * [OpenGameArt](http://opengameart.org/users/voodoo-cactus)
-
-## Leisures
-
-* Retro gaming
-* Manga and Japanese anime
-* Fantasy and Sci-Fi literature/movies
-
-Have questions or suggestions? Want to hire me or just talk about your project(s)? Please feel free to contact me by email at [{{site.author.email}}](mailto:{{site.author.email}}) or [ask me on Twitter]({{site.author.url}}).
-
-Thanks for reading!
