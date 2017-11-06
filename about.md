@@ -13,9 +13,11 @@ Thanks for reading!
 
 * [Email](mailto:{{site.author.email}})
 * [Twitter]({{site.author.url}})
+* [GitHub]({{site.github.repo}})
+{% comment %}
 * [RSS]({{site.rss}})
 * [Facebook]({{site.author.facebook}})
-* [GitHub]({{site.github.repo}})
 * [Tumblr]({{site.author.tumblr}})
 * [Youtube]({{site.author.youtube}})
 * [OpenGameArt](http://opengameart.org/users/voodoo-cactus)
+{% endcomment %}
