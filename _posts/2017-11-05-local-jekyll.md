@@ -4,7 +4,7 @@ comments: true
 title: Build Jekyll websites the easy way
 ---
 
-Building your Jekyll static website is now really easy using Docker. Get [Docker](https://store.docker.com/search?offering=community&q=&type=edition) for your platform and you are done.
+Building your Jekyll static website is now really easy using [Docker](https://store.docker.com/search?offering=community&q=&type=edition).
 
 Go to your Jekyll project and build using the Jekyll Docker image.
 
