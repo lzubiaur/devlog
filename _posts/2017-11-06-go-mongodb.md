@@ -6,7 +6,7 @@ title: Go and MongoDB in Docker
 
 There are many reasons why using containers for local development is very helpful.
 One of the many benefits is the availability of containers images for most of the modern software technologies.
-There is no more need to spend hours installing softwares and dependencies. Just download the container images
+There is no more need to spend hours installing softwares and dependencies. Just download the container images you need
 and you are almost ready to start developing.
 
 In this small tutorial we are looking to connect a Go application to MongoDB using the available Docker images for Go and MongoDB.
@@ -18,7 +18,7 @@ $ docker run --name some-mongo -d mongo
 {% endhighlight %}
 
 This will pull the MongoDB image and start the database instance `some-mono`.
-The instance is now listening for connections on the default port (27017) but we still have to know its IP.
+The instance is now listening for connections on the default port (27017) but we still have to figure out its IP.
 
 By default Docker containers running on the same host can communicate through the *bridge* network. We are able to check the IP assigned to each container using the `docker network` command.
 
@@ -60,7 +60,7 @@ func main() {
 {% endhighlight %}
 
 We are now ready to create the Go container for our application.
-The following `Dockerfile` will create a container from the Go image and copy the source files inside the container.
+The following `Dockerfile` will create a container from the Go base image and copy the source files inside the container.
 
 {% highlight docker %}
 FROM golang
@@ -82,11 +82,11 @@ $ docker build -t golang-mongo .
 
 The `Dockerfile` above specifies some `RUN` and `CMD` directives.
 
-The first `RUN` directive will run `go get` to download any package dependencies from our app.
+The first `RUN` directive will run `go get` to download any package dependencies defined by our app.
 The second `RUN` will actually build and install the application inside the container.
 The `CMD` defines our Go app as the default command to execute when the container starts.
 
-Finally our application container `golan-mongo` is run as follow.
+Finally our application container `golan-mongo` is launched as follow.
 Note the `--rm` option so the container is removed when the application exits.
 
 {% highlight shell %}
